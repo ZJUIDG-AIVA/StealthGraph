@@ -45,7 +45,7 @@ echo "✅ LoRA model directory exists: $LORA_MODEL_PATH"
 
 # ---------- Conda Environment Activation ----------
 activate_conda() {
-    echo "📦 Activating conda environment: RiskAtlas"
+    echo "📦 Activating conda environment: StealthGraph"
     if command -v conda >/dev/null 2>&1; then
         eval "$(conda shell.bash hook)"
     else
@@ -59,7 +59,7 @@ activate_conda() {
             fi
         done
     fi
-    conda activate RiskAtlas
+    conda activate StealthGraph
 }
 
 check_port_free() {
@@ -139,7 +139,7 @@ launch_finetune_server() {
     # Use tmux to start service in background
     tmux new-session -d -s "$SESSION_NAME" -c "$PROJECT_ROOT" bash -c "
         eval \"\$(conda shell.bash hook)\";
-        conda activate RiskAtlas;
+        conda activate StealthGraph;
         python -m vllm.entrypoints.openai.api_server \
             --model '$BASE_MODEL_PATH' \
             --enable-lora \

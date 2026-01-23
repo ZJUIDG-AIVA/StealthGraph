@@ -141,16 +141,16 @@ class Tester():
                 for col in df.columns:
                     all_sentences.extend(df[col].dropna().astype(str).tolist())
             self.dataset = all_sentences # len == 290
-        elif self.dataset_name == "RiskAtlas_original_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_original_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["original_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["stealth_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_success_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_stealth_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_success_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_stealth_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["stealth_prompt"].dropna().astype(str).tolist()
         else:
@@ -343,7 +343,7 @@ def main():
 
 
     # ['AdvBench', 'Do-Not-Answer', 'HarmfulQA', 'CategoricalHarmfulQA', 'HEx-PHI',
-    #  'RiskAtlas_original_data', 'RiskAtlas_stealth_data', 'RiskAtlas_stealth_success_data']
+    #  'StealthGraph_original_data', 'StealthGraph_stealth_data', 'StealthGraph_stealth_success_data']
     parser.add_argument('--dataset', default="AdvBench", type=str, help='dataset name')
     parser.add_argument('--workers', '-w', default=20, type=int, help='Number of parallel workers (default: 200)')
     parser.add_argument('--progress-interval', default=10, type=int, help='Progress report interval')

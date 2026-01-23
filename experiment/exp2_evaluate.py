@@ -145,16 +145,16 @@ class FinetuneModelEvaluator:
                 for col in df.columns:
                     all_sentences.extend(df[col].dropna().astype(str).tolist())
             self.dataset = all_sentences # len == 290
-        elif self.dataset_name == "RiskAtlas_original_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_original_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["original_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["stealth_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_success_data":
-            csv_path = self.data_root / "RiskAtlas" / "RiskAtlas_stealth_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_success_data":
+            csv_path = self.data_root / "StealthGraph" / "StealthGraph_stealth_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             self.dataset = df["stealth_prompt"].dropna().astype(str).tolist()
         else:
@@ -375,11 +375,11 @@ def main():
     parser.add_argument('--model', default="Llama-3.1-8B-finetune", type=str, help='Target model name')
 
     # ['AdvBench', 'Do-Not-Answer', 'HarmfulQA', 'CategoricalHarmfulQA', 'HEx-PHI',
-    #  'RiskAtlas_original_data', 'RiskAtlas_stealth_data', 'RiskAtlas_stealth_success_data']
+    #  'StealthGraph_original_data', 'StealthGraph_stealth_data', 'StealthGraph_stealth_success_data']
     parser.add_argument('--dataset', default='HarmfulQA', type=str, help='attack dataset name')
 
     # ['None', 'AdvBench', 'Do-Not-Answer', 'HarmfulQA', 'CategoricalHarmfulQA', 'HEx-PHI',
-    #  'RiskAtlas_original_data', 'RiskAtlas_stealth_data', 'RiskAtlas_stealth_success_data']
+    #  'StealthGraph_original_data', 'StealthGraph_stealth_data', 'StealthGraph_stealth_success_data']
     parser.add_argument('--finetune_dataset', default="None", type=str, help='finetune dataset name')
     parser.add_argument('--workers', '-w', default=200, type=int, help='Number of parallel workers (default: 200)')
     parser.add_argument('--progress-interval', default=10, type=int, help='Progress report interval')

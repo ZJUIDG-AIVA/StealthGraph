@@ -68,7 +68,7 @@ def compute_self_bleu(texts: List[str],
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, default="RiskAtlas_medicine_prompts_sampled.json")
+    parser.add_argument("--input", type=str, default="StealthGraph_medicine_prompts_sampled.json")
     parser.add_argument("--json_key", type=str, default="prompt_text")
     parser.add_argument("--model", type=str, default="sentence-transformers/all-MiniLM-L6-v2")
     parser.add_argument("--batch_size", type=int, default=64)

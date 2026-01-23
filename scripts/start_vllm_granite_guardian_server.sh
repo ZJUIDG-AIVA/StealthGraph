@@ -25,7 +25,7 @@ mkdir -p "$LOG_DIR"
 
 # ---------- Conda Environment Activation ----------
 activate_conda() {
-    echo "📦 Activating conda environment: RiskAtlas"
+    echo "📦 Activating conda environment: StealthGraph"
     if command -v conda >/dev/null 2>&1; then
         eval "$(conda shell.bash hook)"
     else
@@ -39,7 +39,7 @@ activate_conda() {
             fi
         done
     fi
-    conda activate RiskAtlas
+    conda activate StealthGraph
 }
 
 check_port_free() {
@@ -110,7 +110,7 @@ launch_granite_guardian() {
     # Start service in background using tmux
     tmux new-session -d -s "$SESSION_NAME" -c "$PROJECT_ROOT" bash -c "
         eval \"\$(conda shell.bash hook)\";
-        conda activate RiskAtlas;
+        conda activate StealthGraph;
         CUDA_VISIBLE_DEVICES=$GRANITE_GPUS python -m vllm.entrypoints.openai.api_server \
             --model '$GRANITE_MODEL_PATH' \
             --host '$GRANITE_HOST' \

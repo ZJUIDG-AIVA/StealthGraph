@@ -100,16 +100,16 @@ class FinetuneExecuter:
                 for col in df.columns:
                     all_sentences.extend(df[col].dropna().astype(str).tolist())
             raw_dataset = all_sentences # len == 290
-        elif self.dataset_name == "RiskAtlas_original_data":
-            csv_path = self.raw_data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_original_data":
+            csv_path = self.raw_data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             raw_dataset = df["original_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_data":
-            csv_path = self.raw_data_root / "RiskAtlas" / "RiskAtlas_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_data":
+            csv_path = self.raw_data_root / "StealthGraph" / "StealthGraph_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             raw_dataset = df["stealth_prompt"].dropna().astype(str).tolist()
-        elif self.dataset_name == "RiskAtlas_stealth_success_data":
-            csv_path = self.raw_data_root / "RiskAtlas" / "RiskAtlas_stealth_random_data.csv"
+        elif self.dataset_name == "StealthGraph_stealth_success_data":
+            csv_path = self.raw_data_root / "StealthGraph" / "StealthGraph_stealth_random_data.csv"
             df = pd.read_csv(csv_path) # len == 200
             raw_dataset = df["stealth_prompt"].dropna().astype(str).tolist()
         else:
@@ -242,8 +242,8 @@ def main():
     parser.add_argument('--num', default=200, type=int, help='Number of dataset samples to use')
 
     # ['AdvBench', 'Do-Not-Answer', 'HarmfulQA', 'CategoricalHarmfulQA', 'HEx-PHI',
-    #  'RiskAtlas_original_data', 'RiskAtlas_stealth_data', 'RiskAtlas_stealth_success_data']
-    parser.add_argument('--finetune_dataset', default="RiskAtlas_stealth_success_data", type=str, help='dataset name')
+    #  'StealthGraph_original_data', 'StealthGraph_stealth_data', 'StealthGraph_stealth_success_data']
+    parser.add_argument('--finetune_dataset', default="StealthGraph_stealth_success_data", type=str, help='dataset name')
 
 
     args = parser.parse_args()

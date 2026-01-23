@@ -1,4 +1,4 @@
-name: RiskAtlas
+name: StealthGraph
 channels:
   - conda-forge
   - nodefaults

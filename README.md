@@ -1,5 +1,5 @@
 <h2 align="center">
-RiskAtlas: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
+StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
 </h2>
 
 <p align="center">
@@ -67,8 +67,8 @@ conda env create -f environment.yml
 If the command above fails, you can also build your environment with follwling steps:
 ```bash
 # create new environment
-create -n RiskAtlas python=3.11
-conda activate RiskAtlas
+create -n StealthGraph python=3.11
+conda activate StealthGraph
 
 # Install pytorch
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
@@ -279,10 +279,10 @@ real_pipeline/outputs/{domain}/
 ### Experiment directory tree
 ```Text
 --experiment--exp1_exp2_dataset # datasets of public benchmarks and our random selected data
-           |--exp3_dataset--{domain name}--final*.json # RiskAtlas final dataset
+           |--exp3_dataset--{domain name}--final*.json # StealthGraph final dataset
            |                            |--step3*.json # original dataset with toxicity score
            |--exp3_result # evaluation results for multi-domain experiments
-           |--exp4_dataset--RiskAtlas_medicine_prompts_sampled.json
+           |--exp4_dataset--StealthGraph_medicine_prompts_sampled.json
            |             |--without_kg_step2_data.json
            |--exp4_result # ablation study results
            |--ASRDemoEvaluator.py # ASR evaluation utility
@@ -295,7 +295,7 @@ real_pipeline/outputs/{domain}/
 ```
 
 
-### Experiment 1: Evaluation of ASR on public benchmarks and our RiskAtlas
+### Experiment 1: Evaluation of ASR on public benchmarks and our StealthGraph
 
 ```Bash
 python experiment/exp1_dataset.py
@@ -318,7 +318,7 @@ python experiment/exp2_evaluate.py --model {safety finetuned model name} --datas
 
 If you want to evaluate `LLMU` of the safety finetuned model.
 ```Bash
-conda activate RiskAtlas
+conda activate StealthGraph
 
 git clone --depth 1 https://github.com/EleutherAI/lm-evaluation-harness
 cd lm-evaluation-harness

@@ -316,7 +316,7 @@ Lastly, evaluate the safety finetuned model on unseen datasets.
 python experiment/exp2_evaluate.py --model {safety finetuned model name} --dataset {attack dataset name} --finetune_dataset {finetune dataset name}
 ```
 
-If you want to evaluate `LLMU` of the safety finetuned model.
+If you want to evaluate `MMLU` of the safety finetuned model.
 ```Bash
 conda activate StealthGraph
 
@@ -339,3 +339,25 @@ python experiment/exp3_multi_domain.py --domain {your domain}
 ```Bash
 python experiment/exp4_ablation_kg.py
 ```
+
+## Citation
+
+If you use StealthGraph in your research, please cite:
+
+```bibtex
+@misc{zheng2026stealthgraph,
+  title         = {StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation},
+  author        = {Zheng, Huawei and Jiang, Xinqi and Yang, Sen and Ji, Shouling and Wu, Yingcai and Deng, Dazhen},
+  year          = {2026},
+  eprint        = {2601.04740},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2601.04740}
+}
+```
+
+## License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+

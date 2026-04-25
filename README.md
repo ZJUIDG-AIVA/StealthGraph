@@ -1,14 +1,18 @@
 <div align="center">
 
-# StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
+<h2>
+StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
+</h2>
 
-**Huawei Zheng, Xinqi Jiang, Sen Yang, Shouling Ji, Yingcai Wu, Dazhen Deng**
+<p>
+<strong>Huawei Zheng, Xinqi Jiang, Sen Yang, Shouling Ji, Yingcai Wu, Dazhen Deng</strong>
+</p>
 
 <a href="https://arxiv.org/abs/2601.04740">
-  <img src="https://img.shields.io/badge/arXiv-2601.04740-b31b1b.svg" />
+  <img src="https://img.shields.io/badge/arXiv-2601.04740-b31b1b.svg" alt="arXiv" />
 </a>
 
-<br>
+<br />
 
 <strong>Accepted to ACL 2026 Main Conference</strong>
 

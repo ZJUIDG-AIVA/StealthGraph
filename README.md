@@ -1,17 +1,29 @@
-<h2 align="center">
-StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
-</h2>
+<div align="center">
 
-<p align="center">
-  <a href="https://arxiv.org/abs/2601.04740">
-    <img src="https://img.shields.io/badge/arXiv-2601.04740-b31b1b.svg" />
-  </a>
-</p>
+# StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation
+
+**Huawei Zheng, Xinqi Jiang, Sen Yang, Shouling Ji, Yingcai Wu, Dazhen Deng**
+
+<a href="https://arxiv.org/abs/2601.04740">
+  <img src="https://img.shields.io/badge/arXiv-2601.04740-b31b1b.svg" />
+</a>
+
+<br>
+
+<strong>Accepted to ACL 2026 Main Conference</strong>
+
+</div>
+
+
+## 🔥 News
+
+- [2026.04.06] 🎉 StealthGraph has been accepted to ACL 2026 Main Conference!
+- [2026.01.08] We released the [paper](https://arxiv.org/abs/2601.04740) and code.
 
 
 ## Abstract
 
-Large language models (LLMs) are increasingly applied in specialized domains such as finance and healthcare, where they introduce unique safety risks. Domain-specific datasets of harmful prompts remain scarce and still largely rely on manual construction; public datasets mainly focus on explicit harmful prompts, which modern LLM defenses can often detect and refuse. In contrast, implicit harmful prompts—expressed through indirect domain knowledge—are harder to detect and better reflect real-world threats. We identify two challenges: transforming domain knowledge into actionable constraints and increasing the implicitness of generated harmful prompts. To address them, we propose an end-to-end framework that first performs knowledge-graph-guided harmful prompt generation to systematically produce domain-relevant prompts, and then applies dual-path obfuscation rewriting to convert explicit harmful prompts into implicit variants via direct and context-enhanced rewriting. This framework yields high-quality datasets combining strong domain relevance with implicitness, enabling more realistic red-teaming and advancing LLM safety research.
+Large language models (LLMs) are increasingly applied in specialized domains such as finance and healthcare, where they introduce unique safety risks. Domain-specific datasets of harmful prompts remain scarce and still largely rely on manual construction; public datasets mainly focus on explicit harmful prompts, which modern LLM defenses can often detect and refuse. In contrast, implicit harmful prompts—expressed through indirect domain knowledge—are harder to detect and better reflect real-world threats. We identify two challenges: transforming domain knowledge into actionable constraints and increasing the implicitness of generated harmful prompts. To address them, we propose an end-to-end framework that first performs knowledge-graph-guided harmful prompt generation to systematically produce domain-relevant prompts, and then applies two-strategy obfuscation rewriting to convert explicit harmful prompts into implicit variants via direct and context-enhanced rewriting. This framework yields high-quality datasets combining strong domain relevance with implicitness, enabling more realistic red-teaming and advancing LLM safety research. We release our code and datasets on GitHub.
 
 ## Overview
 

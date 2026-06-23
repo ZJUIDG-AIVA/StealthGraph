@@ -8,6 +8,12 @@ StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Gui
 <strong>Huawei Zheng, Xinqi Jiang, Sen Yang, Shouling Ji, Yingcai Wu, Dazhen Deng</strong>
 </p>
 
+<a href="https://aclanthology.org/2026.acl-long.295/">
+  <img src="https://img.shields.io/badge/ACL%20Anthology-2026.acl--long.295-blue.svg" alt="ACL Anthology" />
+</a>
+<a href="https://aclanthology.org/2026.acl-long.295.pdf">
+  <img src="https://img.shields.io/badge/PDF-ACL%202026-red.svg" alt="PDF" />
+</a>
 <a href="https://arxiv.org/abs/2601.04740">
   <img src="https://img.shields.io/badge/arXiv-2601.04740-b31b1b.svg" alt="arXiv" />
 </a>
@@ -361,19 +367,16 @@ python experiment/exp4_ablation_kg.py
 If you use StealthGraph in your research, please cite:
 
 ```bibtex
-@misc{zheng2026stealthgraph,
-  title         = {StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation},
-  author        = {Zheng, Huawei and Jiang, Xinqi and Yang, Sen and Ji, Shouling and Wu, Yingcai and Deng, Dazhen},
-  year          = {2026},
-  eprint        = {2601.04740},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CL},
-  url           = {https://arxiv.org/abs/2601.04740}
+@inproceedings{zheng-etal-2026-stealthgraph,
+  title = {{StealthGraph: Exposing Domain-Specific Risks in LLMs through Knowledge-Graph-Guided Harmful Prompt Generation}},
+  author = {Zheng, Huawei and Jiang, Xinqi and Yang, Sen and Ji, Shouling and Wu, Yingcai and Deng, Dazhen},
+  booktitle = {Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)},
+  year = {2026},
+  url = {https://aclanthology.org/2026.acl-long.295/},
+  pages = {6519--6539},
 }
 ```
 
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
-
-
